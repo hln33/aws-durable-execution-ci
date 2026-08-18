@@ -1,0 +1,18 @@
+name: Test Stale Issue Closer
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  close-stale:
+    permissions:
+      contents: read
+      issues: write
+    uses: hln33/aws-durable-execution-ci/.github/workflows/stale-issue-closer.yml@feature/stale-issue-closer
+    with:
+      days-until-close: 1
+      close-reason: not_planned

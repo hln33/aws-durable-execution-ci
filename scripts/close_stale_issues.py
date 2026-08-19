@@ -118,7 +118,7 @@ def get_gh_open_issues(repo: str) -> list[dict[str, Any]]:
         )
         if not isinstance(response, list):
             raise StaleIssueError("GitHub returned an invalid issue list")
-        
+
         for issue in response:
             if isinstance(issue, dict) and "pull_request" not in issue:
                 issues.append(issue)

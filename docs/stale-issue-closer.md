@@ -18,8 +18,6 @@ For each open issue that carries `needs-info`, the workflow:
    the workflow posts the closing comment and closes the issue.
 
 Issues still inside the window are left untouched. Pull requests are ignored.
-If `needs-info` has no `labeled` event in the timeline, the issue is skipped
-with a warning rather than closed on an unknown start time.
 
 Removing the label (for example, once the reporter responds and a maintainer
 acts on it) takes the issue out of scope on the next run.

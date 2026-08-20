@@ -6,8 +6,7 @@ on:
     # Avoid scheduling at the top of the hour to reduce that risk:
     # https://docs.github.com/actions/using-workflows/events-that-trigger-workflows#schedule
     # Run every day at 12:37 UTC.
-    # - cron: "37 12 * * *"
-    - cron: "*/5 * * * *"
+    - cron: "37 12 * * *"
   workflow_dispatch:
   workflow_call:
     inputs:
@@ -40,8 +39,8 @@ jobs:
       - name: Check out stale issue closer toolkit
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
-          # Use job.workflow_* so reusable calls fetch this workflow repo's
-          # script, not caller-owned code.
+          # Use the reusable workflow's identity so workflow_call fetches this
+          # workflow repo's script, not caller-owned code.
           repository: ${{ job.workflow_repository }}
           ref: ${{ job.workflow_sha }}
           sparse-checkout: scripts/close_stale_issues.py

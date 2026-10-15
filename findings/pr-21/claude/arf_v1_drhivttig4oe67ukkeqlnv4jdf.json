@@ -1,0 +1,1 @@
+{"finding_digest":"1c4e8ace68371c4f7e8a5120b6d7891977cc3810c6ca481bddb6f441f6ee01cf","finding_id":"arf_v1_drhivttig4oe67ukkeqlnv4jdf","identity_key":"scripts/smoke_load_review_config.py::load_review_config::unsafe-yaml-load","pull_request_number":21,"repository":{"full_name":"hln33/aws-durable-execution-ci","id":1338910461},"reviewer":"claude","schema_version":1}
